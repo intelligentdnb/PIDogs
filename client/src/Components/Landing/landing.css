@@ -1,0 +1,8 @@
+.background{    
+    background-image: url("../../img/WallpaperDog2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;    
+    position: relative;
+};

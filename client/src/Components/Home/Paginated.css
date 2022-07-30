@@ -1,0 +1,13 @@
+.Paginado {
+    display: flex;
+    list-style: none;
+    margin: 15px;
+};
+
+.Paginado:hover{
+    cursor: pointer;
+};
+
+li{
+    margin: 5px;
+};
