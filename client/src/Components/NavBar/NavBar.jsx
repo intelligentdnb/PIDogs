@@ -1,9 +1,23 @@
 import React from 'react'
-import SearchBar from './SearchBar'
+import {NavLink, useHistory} from "react-router-dom";
+
+
 
 const NavBar = () => {
+
+const history = useHistory()
+
   return (
-    <SearchBar/>
+    <>
+    <NavLink to="/home">
+      <button>Home</button>
+    </NavLink>
+    <button onClick={() => history.goBack()}>Go Back</button>
+    <button onClick={() => history.goForward()}>Go Next</button>
+    <NavLink to="/dogcreate">
+      <button>Create your own dog!</button>
+    </NavLink>
+    </>
   )
 }
 

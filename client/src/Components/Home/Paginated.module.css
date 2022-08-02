@@ -1,0 +1,17 @@
+.paginado {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    border: 1px solid red;
+};
+
+.paginado:hover{
+    cursor: pointer;
+};
+
+.paginado p{
+    color:blue;
+    margin-left: 15px;
+    border: 1px solid red;
+};

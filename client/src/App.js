@@ -4,6 +4,8 @@ import Landing from "./Components/Landing/Landing.jsx";
 import Home from './Components/Home/Home.jsx';
 import DogsDetail from './Components/DogsDetails/DogsDetail';
 import NavBar from './Components/NavBar/NavBar';
+import CreateMyDog from "./Components/CreateDog/CreateMyDog";
+//      
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       </Switch>
       <Route exact path="/home" component={Home}/>
       <Route path="/details/:id" component={DogsDetail}/>
+      <Route exact path ="/dogcreate" component = {CreateMyDog}/>
     </div>
   );
 }

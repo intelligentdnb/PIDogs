@@ -109,13 +109,13 @@ router.post("/", async (req, res, next) => {
       height,
       weight,
       life_span,
-      temperaments}= req.body; 
+      temperament}= req.body; 
       
-  console.log(temperaments)
+  
   try {
       let id = uuidv4()
       createNewDog = await Dog.create({name, height, weight, life_span, id})
-      let tempDb = await Temperament.findAll({where:{name:temperaments}})
+      let tempDb = await Temperament.findAll({where:{name:temperament}})
       createNewDog.addTemperament(tempDb);
       return res.send('Breed created successfully');
   } catch (error) {

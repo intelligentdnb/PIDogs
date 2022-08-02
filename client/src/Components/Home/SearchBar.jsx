@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux';
+//import { Link } from 'react-router-dom';
 import { searchDog } from '../../Redux/Actions';
+
 
 const SearchBar = () => {
 
@@ -9,7 +11,7 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(searchDog(dogName));
+        dispatch(searchDog(dogName.toLowerCase()));
         e.target.reset();
     };
 
@@ -18,12 +20,11 @@ const SearchBar = () => {
         setDogName(e.target.value);
     };
 
-
   return (
     <div>
         <div>
               <form onSubmit={(e) => handleSubmit(e)}>
-                <input
+                <input className='input'
                   placeholder="Search dog..."
                   name="name"
                   type="text"
