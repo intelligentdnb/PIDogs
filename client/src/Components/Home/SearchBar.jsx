@@ -11,7 +11,7 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(searchDog(dogName.toLowerCase()));
+        dispatch(searchDog(dogName));
         e.target.reset();
     };
 

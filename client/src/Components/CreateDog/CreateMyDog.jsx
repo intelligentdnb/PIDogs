@@ -61,7 +61,7 @@ function CreateMyDog() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(input.temperaments && input.life_span && input.weight && input.name && input.height){
+        if(input.temperaments.length && input.life_span && input.weight && input.name && input.height){
           alert("Your breed has been created successfully");
           dispatch(createDog(input))
           setInput({
@@ -77,12 +77,12 @@ function CreateMyDog() {
       };
 
     function handleSelect(e) {
-        if (input.temperaments.includes(parseInt(e.target.value))) {
+        if (input.temperaments.includes(e.target.value)) {
           alert("You already selected this temperament");
         } else {
           setInput((prev) => ({
             ...prev,
-            temperaments: [...prev.temperaments, parseInt(e.target.value)],
+            temperaments: [...prev.temperaments, e.target.value],
           }));
         }
     }
@@ -90,8 +90,8 @@ function CreateMyDog() {
     const tempsNames = (array) => {
         let names = [];
         temperamentos?.forEach((e) => (
-            array.forEach((id) => {
-                if (parseInt(id) === e.id) {
+            array.forEach(name => {
+                if (name === e.name) {
                     names.push(e.name);
                 }
             })
@@ -100,9 +100,10 @@ function CreateMyDog() {
     }
 
 return (
-    <div>
+<div className="containerCreate">
+    <div className="backgroundCreate">
         <h1>Create your dog!</h1>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)} className="formCreate">
             <input onChange={(e) => handleChange(e)} name="name" value={input.name} placeholder="Name of your dog!"></input>
             {errors.name ? <p>{errors.name}</p> : false}
             <br/> 
@@ -117,7 +118,7 @@ return (
             <br/>
             <select name="temperaments" value={input.temperaments} onChange={(e) => handleSelect(e)} >
                 {temperamentos?.map((e) =>{
-                return <option value={e.id} key={e.name}>{e.name}</option>
+                return <option value={e.name} key={e.name}>{e.name}</option>
                 })}
             </select>
             {errors.temperaments ? <p>{errors.temperaments} </p> : false}
@@ -130,9 +131,9 @@ return (
                         ))
                     }
             <button type="submit">Create!</button> 
-        </form>
-            
+        </form>            
     </div>
+</div>
 )
 
 }

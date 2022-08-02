@@ -76,16 +76,18 @@ const sortTemps = (e) => {
 }
 
   return (
-    <div>
+    <div className="containerHome">
       <Orders sortByName={sortByName} sortByLocation={sortByLocation} sortKG={sortKG} sortTemps={sortTemps} allTemps={allTemps}/>
       <SearchBar/>
     <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} 
                currentPage={currentPage} setCurrentpage={setCurrentPage}/>
+      <div className='containerCards'>
       {currentDogs?.map(e => {
        return (
         <DogsCards e={e} key={e.id}/>
        ) 
       })}
+      </div>
     </div>
   )
 }
