@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 import { showTemperaments, createDog } from "../../Redux/Actions/index";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -99,6 +98,9 @@ function CreateMyDog() {
         return names;
     }
 
+
+
+
 return (
 <div className="containerCreate">
     <div className="backgroundCreate">
@@ -116,9 +118,9 @@ return (
             <input onChange={(e) => handleChange(e)} name="life_span" value={input.life_span} type="text" placeholder="Life span of your dog"></input>
             {errors.life_span ? <p>{errors.life_span}</p> : false}
             <br/>
-            <select name="temperaments" value={input.temperaments} onChange={(e) => handleSelect(e)} >
+            <select name="temperaments" value={input.temperaments} onChange={(e) => handleSelect(e)}>
                 {temperamentos?.map((e) =>{
-                return <option value={e.name} key={e.name}>{e.name}</option>
+                return <option value={e.name} key={e.id}>{e.name}</option>
                 })}
             </select>
             {errors.temperaments ? <p>{errors.temperaments} </p> : false}

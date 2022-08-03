@@ -19,6 +19,11 @@ function DogsCards({e}) {
             
         )
     } else {
+      if(e.createdInDb){
+        console.log(e)
+        let temperaments = e.temperaments.map(e => e.name).join(", ")
+       e.temperament = temperaments
+      }
         return (
             <div>
                 <div className="card">

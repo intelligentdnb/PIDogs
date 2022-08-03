@@ -12,7 +12,7 @@ const Paginated = ({dogsPerPage, allDogs, paginado, currentPage, setCurrentPage}
     <div>
       <ul className="paginadoPosta">
         {pageNumbers?.map(num => 
-            <li className='numerosPaginado' key={num}><p classname="numerosPaginadoP" onClick={() => paginado(num)}>{num}</p></li>
+            <li className='numerosPaginado' key={num}><p className="numerosPaginadoP" onClick={() => paginado(num)}>{num}</p></li>
             )}
       </ul>
     </div>
