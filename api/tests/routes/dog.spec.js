@@ -53,7 +53,7 @@ describe("Dogs routes", () => {
   describe('/temperaments', function() {
     it('GET responde con status 200 si encuentra los temperamentos', function() {
       return agent 
-        .get('/temperament') 
+        .get('/temperaments') 
         .expect(function(res){
           expect(res.status).equal(200)}); 
     })

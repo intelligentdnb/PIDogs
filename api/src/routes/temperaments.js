@@ -8,7 +8,7 @@ router.get("/", async (req, res, next) => {
         const db = await Temperament.findAll()
         return res.status(200).json(db)
     } catch (e) {
-        return res.json(e.message).status(409)
+        return res.status(404).json(e.message)
     }
 })
 
