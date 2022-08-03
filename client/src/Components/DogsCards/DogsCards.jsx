@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import "./dogscards.css"
 import img from "../../img/EFF.jpg"
 
 function DogsCards({e}) {
@@ -13,7 +12,7 @@ function DogsCards({e}) {
                 <div className="card">
                     <img src={e?.image?.url}  alt="Not found"/>
                     <h3>{e?.name}</h3>
-                    <p>{e?.temperament}</p>
+                    <p>{e?.temperament || "This breed doesn't have defined temperaments"}</p>
                     <p>Weight: {e?.weight?.metric}</p>
                 </div>
             

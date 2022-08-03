@@ -34,8 +34,7 @@ router.get('/', async (req, res, next) => {
             res.json(response);
           })
       } catch (error) {
-        next(error)
-        res.send(error.message)
+        res.status(404).send("This dog doesn't exist")
       }
     } else {
       try {
@@ -63,15 +62,12 @@ router.get('/', async (req, res, next) => {
           if(dogs[i].name.includes(name)){
            resultado.push(dogs[i])
           }}
-        res.send(resultado).status(200)       
+        res.status(200).send(resultado)
   
       } catch (error) {
-        next(error)
-        console.log(error)
-        res.send({error:"Dog does not exist"}).status(404)
+        res.status(404).send("This dog doesn't exist")
       }
     }
-  
   })
 
 router.get("/:id", async (req, res, next) => {
@@ -81,7 +77,7 @@ router.get("/:id", async (req, res, next) => {
             const perritos = await axios.get(`${API}${API_KEY}`)
             res.json(perritos.data.find(dog => dog.id === parseInt(id)))
         } catch (error) {
-            next(error)
+          res.status(404).send("This dog doesn't exist")
         }
         
     } else {
@@ -99,7 +95,7 @@ router.get("/:id", async (req, res, next) => {
             .then(resp => res.send(resp))
         
         } catch (error) {
-            next(error)
+            res.status(404).send("This dog doesn't exist")
         }
     }
 })
@@ -119,7 +115,7 @@ router.post("/", async (req, res, next) => {
       createNewDog.addTemperament(tempDb);
       return res.send('Breed created successfully');
   } catch (error) {
-      next(error)
+    res.status(404).send("Error creating the dog")
   }
 });
 

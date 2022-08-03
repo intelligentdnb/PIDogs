@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 //import { Link } from 'react-router-dom';
 import { searchDog } from '../../Redux/Actions';
 
@@ -8,9 +8,11 @@ const SearchBar = () => {
 
     const dispatch = useDispatch();
     const [dogName, setDogName] = useState("");
+    const allDogs = useSelector(state => state.allDogs)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        let result = await 
         dispatch(searchDog(dogName));
         e.target.reset();
     };
@@ -22,7 +24,7 @@ const SearchBar = () => {
 
   return (
     <div>
-        <div>
+        <div className='searchbar'>
               <form onSubmit={(e) => handleSubmit(e)}>
                 <input className='input'
                   placeholder="Search dog..."

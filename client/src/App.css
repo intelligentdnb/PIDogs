@@ -18,10 +18,15 @@
 
 .card {
   width: 300px;
-  height: 350px;
-  background-color: rgb(87, 5, 87);
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.514);
   border-radius: 10px;
-  border-color: black;
+  word-break: break-word;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .card a {
@@ -32,15 +37,14 @@
 }
 
 .card img {
+  height: 185px;
   width: 100%;
-  object-fit: cover;
-  object-position: 0px 0px;
 }
 
 body {
   background-image: url("./img/WallpaperDog1.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   height: 100vh;    
   position: relative;
@@ -53,16 +57,17 @@ body {
 }
 
 .paginadoPosta {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
+    background-color: rgba(0, 0, 0, 0.788);
     color: white;
     list-style: none;
+    border-radius: 10px;
 }
 
 .paginadoPosta li{
-  margin: 0px 10px
+  text-align: center;
+  margin: 0px 5px
 }
 
 .containerDetailCard{
@@ -79,15 +84,15 @@ body {
   width: 950px;
   height: 650px;
   padding: 15px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.514);
   border-color: black;
-  color: rgb(0, 0, 0);
+  color: white;
+  font-size: 20px;
 }
 
 .divImagenDetail {
   width: 700px;
   height: 450px;
-  border: 1px solid black;
 }
 
 .imagenDetail {
@@ -95,6 +100,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
 }
 
 a {
@@ -107,17 +113,66 @@ a {
 
 .backgroundCreate {
   display:flex;
+  color: white;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  border: 15px solid red;
-  width: 200px;
+  background-color: rgba(0, 0, 0, 0.514);
+  width: 30%;
   height: 700px;
+  border-radius: 10px;
 }
 
 .containerCreate {
   display:flex;
   justify-content: center;
+}
+
+.containerCreate input {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.containerCreate select {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button {
+  border: 1px solid white;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+select {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.829);
+  color: white;
+}
+
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+  color: red;
+}
+
+.searchbar input {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.829);
 }
 
 

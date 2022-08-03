@@ -35,7 +35,7 @@ const DogsDetail = ({ match }) => {
                             <h6>Life span of the dog</h6>
                             <p>{aDog?.life_span}</p>
                             <h6>Temperaments of the dog</h6>
-                            <p>{aDog?.temperament ||  "No temperaments for this breed"}</p>
+                            <p>{aDog?.temperament ||  "This breed doesn't have defined temperaments"}</p>
                         </div>
                         <div className="divImagenDetail">
                             <img src={aDog?.image?.url} alt="Not found" className="imagenDetail" />
