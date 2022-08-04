@@ -4,7 +4,7 @@ const { Temperament } = require('../src/db');
 const axios = require('axios');
 
 
-const loadTemperaments = async() => {
+const temperamentsToDB = async() => {
     var {data} = await axios.get(`${API}?api_key=${API_KEY}`)
     var temperaments = []
     data.forEach(e => {
@@ -23,4 +23,4 @@ const loadTemperaments = async() => {
     }
 }
 
-module.exports = loadTemperaments;
+module.exports = temperamentsToDB;

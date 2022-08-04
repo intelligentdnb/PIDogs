@@ -34,7 +34,7 @@ router.get('/', async (req, res, next) => {
             res.json(response);
           })
       } catch (error) {
-        res.status(404).send("This dog doesn't exist")
+        res.status(404).send("Can't get the dogs")
       }
     } else {
       try {
@@ -65,7 +65,7 @@ router.get('/', async (req, res, next) => {
         res.status(200).send(resultado)
   
       } catch (error) {
-        res.status(404).send("This dog doesn't exist")
+        res.status(404).send("Can't get the dogs")
       }
     }
   })
@@ -74,8 +74,8 @@ router.get("/:id", async (req, res, next) => {
     const {id} = req.params;
     if (id.length < 15) {
         try {
-            const perritos = await axios.get(`${API}${API_KEY}`)
-            res.json(perritos.data.find(dog => dog.id === parseInt(id)))
+            const dogys = await axios.get(`${API}${API_KEY}`)
+            res.json(dogys.data.find(dog => dog.id === parseInt(id)))
         } catch (error) {
           res.status(404).send("This dog doesn't exist")
         }
@@ -113,7 +113,7 @@ router.post("/", async (req, res, next) => {
       createNewDog = await Dog.create({name, height, weight, life_span, id})
       let tempDb = await Temperament.findAll({where:{name:temperaments}})
       createNewDog.addTemperament(tempDb);
-      return res.send('Breed created successfully');
+      return res.send('Dog created successfully');
   } catch (error) {
     res.status(404).send("Error creating the dog")
   }

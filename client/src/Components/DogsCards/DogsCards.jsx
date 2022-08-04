@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import img from "../../img/EFF.jpg"
+import Loading from '../Loading/Loading.jsx';
 
 function DogsCards({e}) {
 
@@ -41,8 +42,8 @@ function DogsCards({e}) {
 
   return (
   <NavLink to={"/details/" + e.id} className="linkdetails">
-    {typeof(e) === "undefined" 
-        ? <h1>Loading...</h1>
+    {   !e 
+        ? <Loading/>
         : renderDog(e)
         }
   </NavLink>

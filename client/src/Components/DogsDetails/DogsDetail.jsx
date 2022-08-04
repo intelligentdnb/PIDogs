@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail } from '../../Redux/Actions';
 import img from "../../img/EFF.jpg"
+import Loading from "../Loading/Loading";
 
 const DogsDetail = ({ match }) => {
 
@@ -44,25 +45,6 @@ const DogsDetail = ({ match }) => {
 
                 )
             } else {
-                
-                // aDog?.forEach((e) => {
-                //     e.temperament = ""
-                //     for (let i = 0; i < e.temperaments.length; i++) {
-                //         e.temperament += e.temperaments[i].name.toString() + ", "
-                //     }
-                // })
-                //aDog?.map(e => e.temperaments)
-
-                //   if(aDog.createdInDb !== false){
-                //       let temperamentsString = aDog.temperaments.map(e => e.name).join(", ")
-                //      aDog.temperament = temperamentsString
-                //      console.log("aaaa", temperamentsString)
-                //      console.log(aDog)
-                //     }
-                
-                //      let temperamentsString = aDog.temperaments.map(e => e.name).join(", ")
-                //      aDog.temperament = temperamentsString
-                //<p>{aDog[0]?.temperaments[0]?.name}, {aDog[0]?.temperaments[1]?.name}, {aDog[0]?.temperaments[2]?.name} {aDog[0]?.temperaments[3]?.name}
                 return (
                     <div className="detailCard">
                         <div>
@@ -90,8 +72,8 @@ const DogsDetail = ({ match }) => {
     //renderizado
     return (
         <div className="containerDetailCard">
-            {typeof (aDog) === "undefined"
-                ? <h1>Not found!</h1>
+            {   !aDog
+                ? <Loading/>
                 : renderDog(aDog)
             }
         </div>

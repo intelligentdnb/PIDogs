@@ -84,7 +84,6 @@ function rootReducer(state = initialState, action){
                     filterDogs: orderKG
                 };
             case "FILTER_BY_TEMPS":
-                console.log("Payload", action.payload)
                 const dogys = state.allDogsTwo;
                 const filteredTemps =
                   action.payload === "All"
@@ -96,7 +95,6 @@ function rootReducer(state = initialState, action){
                           let temps = d.temperaments.map((t) => t.name);
                           return temps.includes(action.payload);
                         }
-                        //return 
                       });
                 return {
                   ...state,
