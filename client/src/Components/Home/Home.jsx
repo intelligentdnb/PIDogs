@@ -78,7 +78,7 @@ const sortTemps = (e) => {
   return (
     <div className="containerHome">
       <Orders sortByName={sortByName} sortByLocation={sortByLocation} sortKG={sortKG} sortTemps={sortTemps} allTemps={allTemps}/>
-      <SearchBar/>
+      <SearchBar setCurrentPage={setCurrentPage}/>
     <Paginated dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} 
                currentPage={currentPage} setCurrentpage={setCurrentPage}/>
       <div className='containerCards'>

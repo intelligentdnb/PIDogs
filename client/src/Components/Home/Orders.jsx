@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { orderByName, orderByKG, filterByTemps, filterDogsBy, showTemperaments } from '../../Redux/Actions'
+import React from 'react'
 
 const Orders = ({sortByName, sortKG, sortByLocation, sortTemps, allTemps}) => {
 

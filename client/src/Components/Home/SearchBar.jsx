@@ -4,17 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { searchDog } from '../../Redux/Actions';
 
 
-const SearchBar = () => {
+const SearchBar = ({setCurrentPage}) => {
 
     const dispatch = useDispatch();
     const [dogName, setDogName] = useState("");
     const allDogs = useSelector(state => state.allDogs)
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        let result = await 
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
         dispatch(searchDog(dogName));
         e.target.reset();
+        setCurrentPage(1);
     };
 
     const handleChange = (e) => {
