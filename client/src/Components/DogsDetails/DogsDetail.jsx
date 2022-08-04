@@ -59,7 +59,7 @@ const DogsDetail = ({ match }) => {
                 //      console.log("aaaa", temperamentsString)
                 //      console.log(aDog)
                 //     }
-                console.log(aDog)
+                
                 //      let temperamentsString = aDog.temperaments.map(e => e.name).join(", ")
                 //      aDog.temperament = temperamentsString
                 //<p>{aDog[0]?.temperaments[0]?.name}, {aDog[0]?.temperaments[1]?.name}, {aDog[0]?.temperaments[2]?.name} {aDog[0]?.temperaments[3]?.name}

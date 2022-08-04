@@ -85,7 +85,7 @@ function rootReducer(state = initialState, action){
                 };
             case "FILTER_BY_TEMPS":
                 console.log("Payload", action.payload)
-                const dogys = state.filterDogs;
+                const dogys = state.allDogsTwo;
                 const filteredTemps =
                   action.payload === "All"
                     ? dogys
@@ -98,7 +98,6 @@ function rootReducer(state = initialState, action){
                         }
                         //return 
                       });
-                      console.log("Los perros filtrados", filteredTemps)
                 return {
                   ...state,
                   allDogs: filteredTemps,

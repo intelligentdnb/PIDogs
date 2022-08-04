@@ -13,4 +13,24 @@ router.get("/", async (req, res, next) => {
 })
 
 
+router.get("/:id", async (req, res) => {
+    const {id} = req.params;
+    
+        const temperament = await Temperament.findByPk(id)
+    temperament ? res.status(200).json(temperament) : res.status(404).send("Temperament doesn't exist")
+})
+
+router.delete("/:id", async (req, res) => {
+    const {id} = req.params;
+    const temperament = await Temperament.findByPk(id)
+    if(temperament){
+         await Temperament.destroy({where:{id}})
+    res.status(200).send("Temperament deleted")
+    } else {
+        res.status(404).send("This id temperament doesn't exist")
+    }
+})
+
+
+
 module.exports = router;

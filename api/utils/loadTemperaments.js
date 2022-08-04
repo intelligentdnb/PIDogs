@@ -15,8 +15,9 @@ const loadTemperaments = async() => {
         }
     });
     temperaments = Array.from(new Set(temperaments)).sort() 
-   // Set permite almacenar valores únicos de cualquier tipo
+   // Set me permite almacenar valores únicos de cualquier tipo
    // Array.from crea una nueva instancia de Array a partir de un objeto iterable
+   //Con esto puedo crear sin repetir todos los temperamentos en mi base de datos
     for await (var temp of temperaments) {
         Temperament.create({name: temp})
     }
