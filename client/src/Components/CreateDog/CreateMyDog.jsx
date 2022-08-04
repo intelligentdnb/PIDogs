@@ -57,10 +57,10 @@ function CreateMyDog() {
             [e.target.name]: e.target.value
         }))
     }
-
+    //input.temperaments.length && input.life_span && input.weight && input.name && input.height
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(input.temperaments.length && input.life_span && input.weight && input.name && input.height){
+        if(!errors.life_span && !errors.weight && !errors.name && !errors.height){
           alert("Your breed has been created successfully");
           dispatch(createDog(input))
           setInput({
@@ -98,8 +98,13 @@ function CreateMyDog() {
         return names;
     }
 
-
-
+    const handleDelete = (e) => {
+        e.preventDefault();
+        setInput({
+            ...input,
+            temperaments: input.temperaments?.filter(f => f !== e.target.name)
+        })
+    }
 
 return (
 <div className="containerCreate">
@@ -127,9 +132,10 @@ return (
             <br/>
                     {
                         input.temperaments.map((e) => (
-                            <p id={e} key={e}>
-                                {tempsNames([e])}
-                            </p>
+                            <div id={e} key={e} value={e.name} name={e.name} className="createTemps">
+                             <p name={e.name}>   {tempsNames([e])} </p>
+                             <button onClick={(e)=> handleDelete(e)} name={e} className="btnCreateTemps">x</button>
+                            </div>
                         ))
                     }
             <button type="submit">Create!</button> 

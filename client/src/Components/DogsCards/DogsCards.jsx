@@ -50,18 +50,4 @@ function DogsCards({e}) {
   )
 }
 
-
-/* 
-
- <NavLink to={"/details/" + e.id}>
-    <div>
-      <img src={e.image?.url || "https://cdn.pixabay.com/photo/2017/02/01/09/48/jack-russell-2029214_960_720.jpg"} alt="not found"/>
-      <h1>{e.name}</h1>
-      <p>{e.temperament}</p>
-      <p>{e.weight.metric}</p>
-    </div>
-  </NavLink>
-
-*/
-
 export default DogsCards

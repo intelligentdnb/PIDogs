@@ -5,7 +5,7 @@ const axios = require('axios');
 
 
 const temperamentsToDB = async() => {
-    var {data} = await axios.get(`${API}?api_key=${API_KEY}`)
+    var {data} = await axios.get(`${API}${API_KEY}`)
     var temperaments = []
     data.forEach(e => {
         if(typeof(e.temperament) === "string"){
