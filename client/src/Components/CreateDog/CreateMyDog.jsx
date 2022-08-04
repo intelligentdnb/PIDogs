@@ -60,7 +60,7 @@ function CreateMyDog() {
     //input.temperaments.length && input.life_span && input.weight && input.name && input.height
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!errors.life_span && !errors.weight && !errors.name && !errors.height){
+        if(!errors.life_span && !errors.weight && !errors.name && !errors.height && input.temperaments.length){
           alert("Your breed has been created successfully");
           dispatch(createDog(input))
           setInput({
