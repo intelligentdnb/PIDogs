@@ -1,6 +1,6 @@
 ## Sorry for the bad practices! I was just a beginning student in that time!
 <p align="center">
-  <img src="./imgsToShow/coverImage.png" />
+  <img src="./imgsToShow/coverImageName.png"/>
 </p>
 
 ## Starting
@@ -45,7 +45,7 @@ DB_PASSWORD= postgres password
 DB_HOST=localhost
 DB_NAME=dogs
 API=https://api.thedogapi.com/v1/breeds?API_KEY=
-API_KEY= Create your own API KEY in [thedogapi](https://www.thedogapi.com/)
+API_KEY= Create your own API KEY in thedogapi
 ```
 
 Replace `postgres user` and `postgres password` with your own credentials to connect to postgres. This file will be ignored when uploading to github, as it contains sensitive information (credentials).
