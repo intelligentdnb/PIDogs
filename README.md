@@ -3,7 +3,7 @@
   <img src="./imgsToShow/coverImage.png" />
 </p>
 
-## Comenzando
+## Starting
 
  1. Fork the repository to have a copy of it in your account.
  2. Clone the repository on your computer to start working.
@@ -73,18 +73,18 @@ The general idea is to create an application where you can see information about
 - [ ] Sequelize
 - [ ] PostgreSQL
 
-## Images from project 
+## Images from the project 
 
 
-<p align="left">
-  <img height="200" src="./imgsToShow/landingpage.png" />
+<p align="center">
+  <img height="200" src="./imgsToShow/landingpage.png" alt="Landing Page" />
 </p>
-<p align="left">
-  <img height="200" src="./imgsToShow/home.png" />
+<p align="center">
+  <img height="200" src="./imgsToShow/home.png" alt="Home"/>
 </p>
-<p align="left">
-  <img height="200" src="./imgsToShow/adaptableDogs.png" />
+<p align="center">
+  <img height="200" src="./imgsToShow/adaptableDogs.png" alt="Filter by Temperaments" />
 </p>
-<p align="left">
-  <img height="200" src="./imgsToShow/creatingdog.png" />
+<p align="center">
+  <img height="200" src="./imgsToShow/creatingdog.png" alt="Creating a Dog"/>
 </p>
