@@ -1,4 +1,7 @@
-Sorry for the bad practices! I was just a beginning student in that time!
+## Sorry for the bad practices! I was just a beginning student in that time!
+<p align="center">
+  <img src="./imgsToShow/coverImage.png" />
+</p>
 
 ## Comenzando
 
