@@ -70,7 +70,7 @@ The general idea is to create an application where you can see information about
 - [ ] Sequelize
 - [ ] PostgreSQL
 
-## Images from project 
+## Images from the project 
 
 
 <p align="left">
