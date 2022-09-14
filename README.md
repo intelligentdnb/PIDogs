@@ -73,15 +73,15 @@ The general idea is to create an application where you can see information about
 ## Images from the project 
 
 
-<p align="left">
+<p align="center">
   <img height="200" src="./imgsToShow/landingpage.png" alt="Landing Page" />
 </p>
-<p align="left">
+<p align="center">
   <img height="200" src="./imgsToShow/home.png" alt="Home"/>
 </p>
-<p align="left">
+<p align="center">
   <img height="200" src="./imgsToShow/adaptableDogs.png" alt="Filter by Temperaments" />
 </p>
-<p align="left">
+<p align="center">
   <img height="200" src="./imgsToShow/creatingdog.png" alt="Creating a Dog"/>
 </p>
