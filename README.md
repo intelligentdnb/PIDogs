@@ -1,6 +1,6 @@
 Sorry for the bad practices! I was just a beginning student in that time!
 
-## Comenzando
+## Starting
 
  1. Fork the repository to have a copy of it in your account.
  2. Clone the repository on your computer to start working.
